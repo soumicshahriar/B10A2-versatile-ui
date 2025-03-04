@@ -119,7 +119,8 @@ p {
     bottom: 90px;
     font-size: 0.5em;
 }
-.video-tutorial img{
+
+.video-tutorial img {
     width: 30%;
     display: none;
 }
@@ -141,20 +142,132 @@ p {
 }
 
 
+/* habit section */
+.habit {
+    text-align: center;
+    color: white;
+    margin-top: 5em;
+}
+
+.habit-img {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1em;
+    border: 1px solid red;
+}
+
+.habit-img div {
+    color: white;
+    padding: 1em;
+}
+
+.habit-img div img {
+    width: 80%;
+    border-radius: 50%;
+    transition: transform 0.7s ease;
+
+}
+.habit-img div{
+    transition: transform 0.7s ease;
+}
+
+.habit-img div img:hover {
+    transform: scale(1.3) translate3d(30px, -10px, 20px);
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.696);
+    
+}
+.habit-img div:hover{
+    transform: scale(1.3) translate3d(30px, -10px, 20px);
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.696);
+    transition-delay: .1s;
+}
+
+/* run extra miles section */
+.run-extra-mile {
+    color: white;
+    margin-top: 5em;
+}
+
+.run-extra-mile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid red;
+    padding: 2em;
+    height: 200px;
+    border-radius: 18px;
+    background: rgb(34, 34, 34);
+}
+
+.run-extra-mile-content {
+    width: 50%;
+}
+
+.run-extra-mile-content h1 {
+    font-size: 3em;
+}
+
+.run-extra-mile-content p {
+    opacity: 0.5;
+}
+
+.run-extra-mile-image {
+    width: 50%;
+
+}
+
+.run-extra-mile-image {
+    
+    text-align: end;
+
+}
+
+.run-extra-mile-image img {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 /* mobile responsive  */
 @media screen and (max-width: 576px) {
-    .nav-container{
-        flex-direction: column;
+    body {
+        width: 100%;
+        padding: 2em;
+        margin: auto;
     }
-    .nav-body{  
+
+    .nav-container {
+        flex-direction: column;
+        /* align-items: normal; */
+    }
+
+    .nav-content ul {
+        padding: 0;
+    }
+
+
+    .nav-body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-       
+
     }
+
     .free-workout-video {
         position: absolute;
         width: 160px;
@@ -168,8 +281,9 @@ p {
         right: -10px;
         top: 60px;
         font-size: 0.5em;
-    
+
     }
+
     .video-tutorial {
 
         position: absolute;
@@ -185,9 +299,65 @@ p {
         bottom: 250px;
         font-size: 0.5em;
     }
-    .video-tutorial img{
+
+    .video-tutorial img {
         width: 30%;
         display: block;
     }
-    
-}
+
+
+    /* habit section */
+    .habit-img {
+        flex-direction: column;
+    }
+    .habit-img div img {
+        width: 50%;
+    }
+
+    .habit-img div img:hover {
+        transform: scale(0.8);
+        cursor: pointer;
+        box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.696);
+
+    }
+
+    .habit-img div:hover{
+        transform: none;
+    }
+
+    .habit-img div{
+        transition:none;
+    }
+
+    /* run extra miles section */
+    .run-extra-mile-container {
+        flex-direction: column;
+        height: auto;
+        gap: 1em;
+        padding:0;
+    }
+
+    .run-extra-mile-content h1 {
+        font-size: 2em;
+        width: 80%;
+    } 
+    .run-extra-mile-image img {
+        width: 100%;
+    }
+
+    .run-extra-mile-content{
+        width: 80%;
+    }
+    .run-extra-mile-image{
+        width: 80%;
+    }
+
+    #join-now {
+        width: 100%;
+    }
+
+
+   
+}      
+   
+     
