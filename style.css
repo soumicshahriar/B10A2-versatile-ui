@@ -3,6 +3,7 @@
 
 :root {
     --primary-color: #E6533C;
+    --secondary-color: white;
 }
 
 body {
@@ -119,7 +120,30 @@ p {
     bottom: 90px;
     font-size: 0.5em;
 }
+.video-tutorial{
+ animation: colorShift 20s infinite;
+}
+@keyframes colorShift {
+    0% {
+        background-color: rgba(197, 67, 67, 0.188);
+    }
 
+    25% {
+        background-color: rgba(45, 45, 184, 0.2);
+    }
+
+    50% {
+        background-color: rgba(0, 105, 128, 0.282);
+    }
+
+    75% {
+        background-color: rgba(0, 242, 255, 0.173);
+    }
+
+    100% {
+        background-color: rgba(128, 0, 128, 0.227);
+    }
+}
 .video-tutorial img {
     width: 30%;
     display: none;
@@ -139,6 +163,9 @@ p {
     top: 150px;
     font-size: 0.5em;
 
+}
+.free-workout-video{
+ animation: colorShift 20s infinite;
 }
 
 
@@ -167,7 +194,8 @@ p {
     transition: transform 0.7s ease;
 
 }
-.habit-img div{
+
+.habit-img div {
     transition: transform 0.7s ease;
 }
 
@@ -175,14 +203,18 @@ p {
     transform: scale(1.3) translate3d(30px, -10px, 20px);
     cursor: pointer;
     box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.696);
-    
+
 }
-.habit-img div:hover{
+
+.habit-img div:hover {
     transform: scale(1.3) translate3d(30px, -10px, 20px);
     cursor: pointer;
     box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.696);
     transition-delay: .1s;
 }
+
+
+
 
 /* run extra miles section */
 .run-extra-mile {
@@ -219,7 +251,7 @@ p {
 }
 
 .run-extra-mile-image {
-    
+
     text-align: end;
 
 }
@@ -230,8 +262,191 @@ p {
     border-radius: 20px;
 }
 
+/* Training and Exercise section */
+.training-exercise {
+    color: white;
+    margin-top: 5em;
+    border: 1px solid red;
+}
 
 
+#exercise1 {
+    grid-area: exercise1;
+    position: relative;
+}
+
+
+#exercise2 {
+    grid-area: exercise2;
+    position: relative;
+}
+
+#exercise3 {
+    grid-area: exercise3;
+    position: relative;
+}
+
+#exercise4 {
+    grid-area: exercise4;
+    position: relative;
+}
+
+#exercise5 {
+    grid-area: exercise5;
+    position: relative;
+}
+
+#exercise6 {
+    grid-area: exercise6;
+    position: relative;
+}
+
+
+/* for overlay */
+.overlay1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(6, 255, 210, 0.5);
+    /* Semi-transparent black */
+    z-index: 1;
+}
+
+.overlay2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 0, 0, 0.3);
+    /* Semi-transparent black */
+    z-index: 1;
+}
+
+.overlay3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black */
+    z-index: 1;
+}
+
+.overlay4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black */
+    z-index: 1;
+}
+
+.overlay5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(66, 255, 0, 0.3);
+    /* Semi-transparent black */
+    z-index: 1;
+}
+
+.overlay6 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 71, 255, 0.3);
+    /* Semi-transparent black */
+    z-index: 1;
+}
+
+.content {
+    position: absolute;
+    left: 40px;
+    top: 170px;
+    color: var(--secondary-color);
+    /* Semi-transparent black */
+    z-index: 1;
+}
+
+.content2 {
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    color: var(--secondary-color);
+    /* Semi-transparent black */
+    z-index: 1;
+}
+
+.content3 {
+    position: absolute;
+    left: 40px;
+    top: 170px;
+    color: var(--secondary-color);
+    /* Semi-transparent black */
+    z-index: 1;
+}
+
+.content4 {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    color: var(--secondary-color);
+    /* Semi-transparent black */
+    z-index: 1;
+}
+
+.content5 {
+    position: absolute;
+    left: 40px;
+    top: 170px;
+    color: var(--secondary-color);
+    /* Semi-transparent black */
+    z-index: 1;
+}
+
+.content6 {
+    position: absolute;
+    left: 40px;
+    top: 170px;
+    color: var(--secondary-color);
+    /* Semi-transparent black */
+    z-index: 1;
+}
+
+
+/* ovarlay part end */
+
+
+
+.exercise-img {
+    display: grid;
+    grid-template-areas: "exercise1 exercise2 exercise2 exercise3"
+        "exercise4 exercise4 exercise5 exercise6";
+
+    padding: 1em;
+    border-radius: 1em;
+    grid-gap: 1em;
+
+}
+
+
+
+.exercise-img div img {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 251px;
+    border-radius: 1em;
+}
 
 
 
@@ -310,6 +525,7 @@ p {
     .habit-img {
         flex-direction: column;
     }
+
     .habit-img div img {
         width: 50%;
     }
@@ -321,34 +537,39 @@ p {
 
     }
 
-    .habit-img div:hover{
+    .habit-img div:hover {
         transform: none;
     }
 
-    .habit-img div{
-        transition:none;
+    .habit-img div {
+        transition: none;
     }
+
+
+
 
     /* run extra miles section */
     .run-extra-mile-container {
         flex-direction: column;
         height: auto;
         gap: 1em;
-        padding:0;
+        padding: 0;
     }
 
     .run-extra-mile-content h1 {
         font-size: 2em;
         width: 80%;
-    } 
+    }
+
     .run-extra-mile-image img {
         width: 100%;
     }
 
-    .run-extra-mile-content{
+    .run-extra-mile-content {
         width: 80%;
     }
-    .run-extra-mile-image{
+
+    .run-extra-mile-image {
         width: 80%;
     }
 
@@ -356,8 +577,73 @@ p {
         width: 100%;
     }
 
+    /* training and exercise part */
+    .exercise-img {
+        grid-template-areas: "exercise1 exercise1 exercise2 exercise2"
+            "exercise4 exercise5 exercise5 exercise5";
+        padding: 1em;
+        border-radius: 1em;
+        grid-gap: .5em;
 
-   
-}      
-   
-     
+    }
+
+    #exercise3 {
+        display: none;
+    }
+
+    #exercise6 {
+        display: none;
+    }
+
+
+
+    .exercise-img div img {
+        width: 100%;
+        height: 80px;
+        border-radius: 0px;
+    }
+
+    .content {
+        position: absolute;
+        left: 20px;
+        top: 50px;
+        color: var(--secondary-color);
+        /* Semi-transparent black */
+        z-index: 1;
+    }
+
+    .content2 {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        color: var(--secondary-color);
+        /* Semi-transparent black */
+        z-index: 1;
+    }
+
+    .content4 {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        color: var(--secondary-color);
+        /* Semi-transparent black */
+        z-index: 1;
+        font-size: 0.5em;
+        font-weight: 100;
+
+    }
+
+    .content5 {
+        position: absolute;
+        left: 20px;
+        top: 50px;
+        color: var(--secondary-color);
+        /* Semi-transparent black */
+        z-index: 1;
+        font-size: 0.5em;
+        font-weight: 100;
+    }
+
+
+
+}
