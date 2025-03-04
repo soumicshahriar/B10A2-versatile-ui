@@ -22,8 +22,9 @@ body {
 .nav-container {
     display: flex;
     justify-content: space-between;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(206, 204, 204, 0.671), 0 6px 20px 0 rgba(164, 161, 161, 0.523);
 }
 
 .nav-content ul {
@@ -58,7 +59,8 @@ body {
     align-items: center;
     color: white;
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    box-shadow: 0 4px 8px 0 rgba(183, 179, 179, 0.611), 0 6px 20px 0 rgba(179, 176, 176, 0.693);
 
 }
 
@@ -184,7 +186,7 @@ p {
     display: flex;
     justify-content: space-evenly;
     gap: 1em;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .habit-img div {
@@ -230,11 +232,12 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding: 2em;
     height: 200px;
     border-radius: 18px;
     background: rgb(34, 34, 34);
+    box-shadow: 0 4px 8px 0 rgba(215, 213, 213, 0.648), 0 6px 20px 0 rgba(210, 210, 210, 0.489);
 }
 
 .run-extra-mile-content {
@@ -270,7 +273,7 @@ p {
 .training-exercise {
     color: white;
     margin-top: 5em;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 
@@ -477,7 +480,89 @@ p {
     background-color: rgba(227, 227, 227, 0.33);
     padding: 1em;
     border-radius: 1em;
+    box-shadow: 0 4px 8px 0 rgba(218, 216, 216, 0.573), 0 6px 20px 0 rgba(217, 217, 218, 0.43);
+    
 }
+
+.bmi-calculator-form{
+    /* box-shadow: 0 4px 8px 0 rgba(218, 216, 216, 0.573), 0 6px 20px 0 rgba(217, 217, 218, 0.43); */
+    background-color: rgb(32, 33, 35);
+    padding: 1em;
+    border-radius: 1em;
+    
+}
+
+/* @keyframes borderColorChange {
+    0% {
+        border: 2px solid #ff7e5f;
+    }
+    25% {
+        border: 2px solid #feb47b;
+    }
+    50% {
+        border: 2px solid #ff6a6a;
+    }
+    75% {
+        border: 2px solid #ff7e5f;
+    }
+    100% {
+        border: 2px solid #feb47b;
+    }
+} */
+
+.bmi-calculator-form {
+    position: relative;
+    border-radius: 10%;
+    animation: borderColorChange 4s linear infinite;
+    /* padding: 2em; */
+    
+}
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.bmi-calculator-form::after, .bmi-calculator-form::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 70%, blue);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    padding: .2em;
+    border-radius: 10%;
+    animation: 3s spin linear infinite;
+
+}
+
+ .bmi-calculator-form::before {
+    filter: blur(1.5em);
+    opacity: 0.8;
+}
+
+@keyframes spin {
+    0% {
+        --angle: 0deg;
+    }
+    100% {
+        --angle: 360deg;
+    }
+}   
+
+
+/* @keyframes followBorder {
+    0% {
+        offset-distance: 0%;
+    }
+    100% {
+        offset-distance: 100%;
+    }
+} */
 
 .table {
     border-collapse: collapse;
@@ -528,11 +613,65 @@ td {
 }
 
 
+/* Team section */
+.team-section{
+    color: white;
+    text-align: center;
+    margin: 5em 0;
+}
+.team{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    width: 80%;
+    margin:0 auto;
+    
+}
 
+.team div {
+    position: relative;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-top: 5px solid rgba(255, 255, 255, 0.3);
+}
 
+.team div::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 2px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateX(-50%);
+}
 
+.team div::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
 
+.team div img{
+    border-radius: 1em;
+    height:100%;
+    width: 100%;
+    border-radius: 18px;
 
+}
+
+.team div:hover {
+    transform: translateX(10px);
+    transition: transform 1s ease-in-out;
+}
 
 /* mobile responsive  */
 @media screen and (max-width: 576px) {
