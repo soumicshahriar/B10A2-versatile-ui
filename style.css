@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+
+:root {
+    --primary-color: #E6533C;
+}
+
+body {
+    width: 90%;
+    margin: auto;
+    background-color: black;
+    padding: 1em;
+
+}
+
+.nav-main-container {
+    width: 100%;
+    background: linear-gradient(45deg, rgb(17, 17, 17), rgba(242, 234, 234, 0.129) 100%);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+    align-items: center;
+}
+
+.nav-content ul {
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-content ul li {
+    text-decoration: none;
+    list-style: none;
+    margin-left: 1em;
+    color: white;
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+.home {
+    border: 1px solid white;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.3em 0.5em;
+    border-radius: 46%;
+}
+
+.nav-body {
+    display: flex;
+    /* justify-content: space-evenly; */
+    margin: 1em 0;
+    align-items: center;
+    color: white;
+    width: 100%;
+    border: 1px solid red;
+
+}
+
+p {
+    opacity: 0.5;
+}
+
+.nav-body-content h1 {
+    color: rgb(255, 255, 255);
+    font-family: Inter;
+    font-size: 4em;
+    font-weight: 900;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.shape {
+    font-family: "Dancing Script", cursive;
+}
+
+.join-club-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 42px;
+    border: none;
+}
+
+.download-btn {
+    box-sizing: border-box;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 42px;
+    padding: 0.5em 1em;
+    background-color: transparent;
+    color: white;
+}
+
+.nav-body-image {
+    position: relative;
+    width: 100%;
+    text-align: end;
+
+}
+
+.video-tutorial {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    width: 160px;
+    height: 58px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.1);
+    right: 270px;
+    bottom: 90px;
+    font-size: 0.5em;
+}
+.video-tutorial img{
+    width: 30%;
+    display: none;
+}
+
+.free-workout-video {
+    position: absolute;
+    width: 160px;
+    height: 58px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.1);
+    right: -40px;
+    top: 150px;
+    font-size: 0.5em;
+
+}
+
+
+
+
+
+/* mobile responsive  */
+@media screen and (max-width: 576px) {
+    .nav-container{
+        flex-direction: column;
+    }
+    .nav-body{  
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    .free-workout-video {
+        position: absolute;
+        width: 160px;
+        height: 58px;
+        text-align: center;
+        box-sizing: border-box;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        backdrop-filter: blur(20px);
+        background: rgba(255, 255, 255, 0.1);
+        right: -10px;
+        top: 60px;
+        font-size: 0.5em;
+    
+    }
+    .video-tutorial {
+
+        position: absolute;
+        width: 160px;
+        height: 58px;
+        text-align: center;
+        box-sizing: border-box;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        backdrop-filter: blur(20px);
+        background: rgba(255, 255, 255, 0.1);
+        right: 180px;
+        bottom: 250px;
+        font-size: 0.5em;
+    }
+    .video-tutorial img{
+        width: 30%;
+        display: block;
+    }
+    
+}
